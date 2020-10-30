@@ -1,3 +1,0 @@
-Testcase: src.edu.umb.cs680.hw05.CarTest
-Test: verifyCarEqualityWithMakeModelYear() took 30 milli sec(s)
-Tests run: 1, Failures: 0, Skipped: 0, Aborted: 0, Time elapsed: 46 milli sec(s)
