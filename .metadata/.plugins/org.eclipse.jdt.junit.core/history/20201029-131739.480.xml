@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PrimeGeneratorTest.primeNumbersBetween10and20" project="cs680" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="edu.umb.cs680.hw01.PrimeGeneratorTest" time="0.04" displayname="PrimeGeneratorTest" uniqueid="[engine:junit-jupiter]/[class:edu.umb.cs680.hw01.PrimeGeneratorTest]">
+    <testcase name="primeNumbersBetween10and20" classname="edu.umb.cs680.hw01.PrimeGeneratorTest" time="0.04" displayname="primeNumbersBetween10and20()" uniqueid="[engine:junit-jupiter]/[class:edu.umb.cs680.hw01.PrimeGeneratorTest]/[method:primeNumbersBetween10and20()]"/>
+  </testsuite>
+</testrun>

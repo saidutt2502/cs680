@@ -1,0 +1,24 @@
+package src.edu.umb.cs680.hw05;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import edu.umb.cs680.hw05.Car;
+
+class CarTest {
+
+	private String[] carToStringArray(Car car) {
+		String[] carString = { car.getMake(), car.getModel(), String.valueOf(car.getYear()) };
+		return carString;
+	}
+
+	@Test
+	public void verifyCarEqualityWithMakeModelYear() {
+		Car car1 = new Car("Mercedes", "C Class", 80000, 13, 2014);
+		Car car2 = new Car("Mercedes", "C Class", 80000, 13, 2014);
+		String[] expected = { "BMW", "7 Series", "2020" };
+		System.out.println(carToStringArray(actual));
+		assertArrayEquals(expected, carToStringArray(actual));
+	}
+}

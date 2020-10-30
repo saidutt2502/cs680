@@ -1,0 +1,32 @@
+package src.edu.umb.cs680.hw04;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+import edu.umb.cs680.hw04.Student;
+
+import edu.umb.cs680.hw04.StudentStatus;
+
+class StudentTest {
+
+	Student inStateStudent = Student.createInStateStudent("George", "Downtown, Boston");
+	Student outStateStudent = Student.createOutStateStudent("Kedar", "Malibu", 9,"California");
+	Student internationalStudent = Student.createIntlStudent("Saidutt", 1828020, "Timon Ave, Boston", "Goa, India");
+
+	@Test
+	public void StudentStatus_Instate() throws Exception {
+		assertEquals(StudentStatus.INSTATE, inStateStudent.getStatus());
+	}
+	
+	@Test
+	public void StudentStatus_OutState() throws Exception{
+		assertEquals(StudentStatus.OUTSTATE, outStateStudent.getStatus());
+	}
+	
+	@Test
+	public void StudentStatus_InternationalStudent() throws Exception{
+		assertEquals(StudentStatus.INTERNATIONAL, internationalStudent.getStatus());
+	}
+
+}

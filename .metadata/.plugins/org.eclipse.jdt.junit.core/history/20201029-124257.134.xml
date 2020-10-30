@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CalculatorTest" project="hw01" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="edu.umb.cs680.hw01.CalculatorTest" time="0.068" displayname="CalculatorTest" uniqueid="[engine:junit-jupiter]/[class:edu.umb.cs680.hw01.CalculatorTest]">
+    <testcase name="divide3By2" classname="edu.umb.cs680.hw01.CalculatorTest" time="0.048" displayname="divide3By2()" uniqueid="[engine:junit-jupiter]/[class:edu.umb.cs680.hw01.CalculatorTest]/[method:divide3By2()]"/>
+    <testcase name="divide5By0withTryCatch" classname="edu.umb.cs680.hw01.CalculatorTest" time="0.002" displayname="divide5By0withTryCatch()" uniqueid="[engine:junit-jupiter]/[class:edu.umb.cs680.hw01.CalculatorTest]/[method:divide5By0withTryCatch()]"/>
+    <testcase name="multiply3By4" classname="edu.umb.cs680.hw01.CalculatorTest" time="0.018" displayname="multiply3By4()" uniqueid="[engine:junit-jupiter]/[class:edu.umb.cs680.hw01.CalculatorTest]/[method:multiply3By4()]"/>
+  </testsuite>
+</testrun>

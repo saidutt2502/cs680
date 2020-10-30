@@ -1,0 +1,43 @@
+package edu.umb.cs680.hw06;
+
+public class State {
+	
+	private static DVDPlayer instance = null;
+	private static State state;
+
+	private DVDPlayer(State s) {
+		state = s;
+	}
+
+	public static DVDPlayer getInstance() {
+		if (instance == null) {
+			State s = DrawerClosedNotPlaying.getInstance();
+			instance = new DVDPlayer(s);
+		}
+		return instance;
+	}
+
+	public void changeState(State s) {
+		state = s;
+	}
+	
+	public void openCloseButtonPushed() {
+		state.openCloseButtonPushed();
+	}
+
+	public void playButtonPushed() {
+		state.playButtonPushed();
+	}
+
+	public void stopButtonPushed() {
+		state.stopButtonPushed();
+	}
+	
+	public static void main(String args[]) {
+		DVDPlayer dvdPlayer = DVDPlayer.getInstance();
+		dvdPlayer.openCloseButtonPushed();
+		dvdPlayer.playButtonPushed();
+		dvdPlayer.stopButtonPushed();
+	}
+
+}

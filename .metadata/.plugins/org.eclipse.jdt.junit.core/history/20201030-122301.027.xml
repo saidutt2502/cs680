@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="StudentTest" project="hw04" tests="7" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="src.edu.umb.cs680.hw04.StudentTest" time="0.083" displayname="StudentTest" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw04.StudentTest]">
+    <testcase name="InternationalStudent" classname="src.edu.umb.cs680.hw04.StudentTest" time="0.029" displayname="InternationalStudent()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw04.StudentTest]/[method:InternationalStudent()]"/>
+    <testcase name="OutStateStudent" classname="src.edu.umb.cs680.hw04.StudentTest" time="0.004" displayname="OutStateStudent()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw04.StudentTest]/[method:OutStateStudent()]"/>
+    <testcase name="OutstateStudentTuition_Not30000" classname="src.edu.umb.cs680.hw04.StudentTest" time="0.006" displayname="OutstateStudentTuition_Not30000()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw04.StudentTest]/[method:OutstateStudentTuition_Not30000()]"/>
+    <testcase name="OutstateStudentTution" classname="src.edu.umb.cs680.hw04.StudentTest" time="0.004" displayname="OutstateStudentTution()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw04.StudentTest]/[method:OutstateStudentTution()]"/>
+    <testcase name="InstateStudentTuition" classname="src.edu.umb.cs680.hw04.StudentTest" time="0.004" displayname="InstateStudentTuition()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw04.StudentTest]/[method:InstateStudentTuition()]"/>
+    <testcase name="InstateStudentTution_Not20000" classname="src.edu.umb.cs680.hw04.StudentTest" time="0.004" displayname="InstateStudentTution_Not20000()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw04.StudentTest]/[method:InstateStudentTution_Not20000()]"/>
+    <testcase name="InstateStudent" classname="src.edu.umb.cs680.hw04.StudentTest" time="0.03" displayname="InstateStudent()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw04.StudentTest]/[method:InstateStudent()]"/>
+  </testsuite>
+</testrun>

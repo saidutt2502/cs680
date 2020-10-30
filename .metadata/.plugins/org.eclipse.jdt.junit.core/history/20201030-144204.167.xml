@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CarTest" project="hw05" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="src.edu.umb.cs680.hw05.CarTest" time="0.037" displayname="CarTest" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw05.CarTest]">
+    <testcase name="verifyCarEqualityWithMakeModelYear" classname="src.edu.umb.cs680.hw05.CarTest" time="0.037" displayname="verifyCarEqualityWithMakeModelYear()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw05.CarTest]/[method:verifyCarEqualityWithMakeModelYear()]"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,12 @@
+package edu.umb.cs680.hw01;
+
+import junit.jupiter.api.Assertions.*;
+
+class CalculatorTest {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

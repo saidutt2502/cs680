@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="StudentTest" project="hw04" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="src.edu.umb.cs680.hw04.StudentTest" time="0.042" displayname="StudentTest" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw04.StudentTest]">
+    <testcase name="InternationalStudent" classname="src.edu.umb.cs680.hw04.StudentTest" time="0.023" displayname="InternationalStudent()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw04.StudentTest]/[method:InternationalStudent()]"/>
+    <testcase name="OutStateStudent" classname="src.edu.umb.cs680.hw04.StudentTest" time="0.003" displayname="OutStateStudent()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw04.StudentTest]/[method:OutStateStudent()]"/>
+    <testcase name="InstateStudentTuition" classname="src.edu.umb.cs680.hw04.StudentTest" time="0.002" displayname="InstateStudentTuition()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw04.StudentTest]/[method:InstateStudentTuition()]"/>
+    <testcase name="InstateStudentTution_Not20000" classname="src.edu.umb.cs680.hw04.StudentTest" time="0.002" displayname="InstateStudentTution_Not20000()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw04.StudentTest]/[method:InstateStudentTution_Not20000()]"/>
+    <testcase name="InstateStudent" classname="src.edu.umb.cs680.hw04.StudentTest" time="0.012" displayname="InstateStudent()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw04.StudentTest]/[method:InstateStudent()]"/>
+  </testsuite>
+</testrun>

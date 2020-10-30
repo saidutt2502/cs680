@@ -1,0 +1,12 @@
+package edu.umb.cs680.hw04;
+
+public class Student {
+	
+	private float tution;
+	private String name;
+	private int i20num;
+	private String usAddr;
+	private int yrsInState;
+	private String foreignAddr;
+	
+}
