@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="PrimeGeneratorTest (1)" project="hw03" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="src.edu.umb.cs680.hw03.PrimeGeneratorTest" time="0.071" displayname="PrimeGeneratorTest" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw03.PrimeGeneratorTest]">
-    <testcase name="primeNumbersBetween0and0" classname="src.edu.umb.cs680.hw03.PrimeGeneratorTest" time="0.049" displayname="primeNumbersBetween0and0()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw03.PrimeGeneratorTest]/[method:primeNumbersBetween0and0()]"/>
-    <testcase name="primeNumbersBetweenNegative10and10" classname="src.edu.umb.cs680.hw03.PrimeGeneratorTest" time="0.001" displayname="primeNumbersBetweenNegative10and10()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw03.PrimeGeneratorTest]/[method:primeNumbersBetweenNegative10and10()]"/>
-    <testcase name="primeNumbersBetween100and1" classname="src.edu.umb.cs680.hw03.PrimeGeneratorTest" time="0.002" displayname="primeNumbersBetween100and1()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw03.PrimeGeneratorTest]/[method:primeNumbersBetween100and1()]"/>
-    <testcase name="primeNumbersBetween10and20" classname="src.edu.umb.cs680.hw03.PrimeGeneratorTest" time="0.018" displayname="primeNumbersBetween10and20()" uniqueid="[engine:junit-jupiter]/[class:src.edu.umb.cs680.hw03.PrimeGeneratorTest]/[method:primeNumbersBetween10and20()]"/>
-  </testsuite>
-</testrun>

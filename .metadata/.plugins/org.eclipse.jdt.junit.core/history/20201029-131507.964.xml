@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="PrimeGeneratorTest" project="cs680" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="edu.umb.cs680.hw01.PrimeGeneratorTest" time="0.044" displayname="PrimeGeneratorTest" uniqueid="[engine:junit-jupiter]/[class:edu.umb.cs680.hw01.PrimeGeneratorTest]">
-    <testcase name="primeNumbersBetweenNegative10to10" classname="edu.umb.cs680.hw01.PrimeGeneratorTest" time="0.023" displayname="primeNumbersBetweenNegative10to10()" uniqueid="[engine:junit-jupiter]/[class:edu.umb.cs680.hw01.PrimeGeneratorTest]/[method:primeNumbersBetweenNegative10to10()]"/>
-    <testcase name="primeNumbersBetween100to1" classname="edu.umb.cs680.hw01.PrimeGeneratorTest" time="0.004" displayname="primeNumbersBetween100to1()" uniqueid="[engine:junit-jupiter]/[class:edu.umb.cs680.hw01.PrimeGeneratorTest]/[method:primeNumbersBetween100to1()]"/>
-    <testcase name="primeNumbersBetween10to20" classname="edu.umb.cs680.hw01.PrimeGeneratorTest" time="0.017" displayname="primeNumbersBetween10to20()" uniqueid="[engine:junit-jupiter]/[class:edu.umb.cs680.hw01.PrimeGeneratorTest]/[method:primeNumbersBetween10to20()]"/>
-  </testsuite>
-</testrun>
