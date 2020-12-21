@@ -18,7 +18,7 @@ import edu.umb.cs680.hw10.ApfsLink;
 
 class AfspFileCrawlingVisitorTest {
 
-static LocalDateTime localTime = LocalDateTime.of(2020, 05, 20, 0, 0);
+static LocalDateTime localTime = LocalDateTime.of(2020, 12, 12, 0, 0);
 private String[] arraystringfordirectory(ArrayList<ApfsFile> files) {
 	String[] filesInDir = new String[files.size()];
 	int i = 0;
@@ -53,7 +53,7 @@ private String[] arraystringfordirectory(ArrayList<ApfsFile> files) {
 		ApfsFileCrawlingVisitor visitor = new ApfsFileCrawlingVisitor();
 		APFS ApfsFileSystem = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)ApfsFileSystem.getRootDir();
-		ApfsDirectory home = root.findByName_Directory("home");
+		ApfsDirectory home = root.findDirectoryByName("home");
 		home.accept(visitor);
 		String[] expected = {"e","f","c","d"};
 		ArrayList<ApfsFile> actual= visitor.getFiles();
@@ -79,7 +79,7 @@ private String[] arraystringfordirectory(ArrayList<ApfsFile> files) {
 		ApfsFileCrawlingVisitor visitor = new ApfsFileCrawlingVisitor();
 		APFS ApfsFileSystem = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)ApfsFileSystem.getRootDir();
-		ApfsDirectory system = root.findByName_Directory("applications");
+		ApfsDirectory system = root.findDirectoryByName("applications");
 		system.accept(visitor);
 		String[] expected = {"a","b"};
 		ArrayList<ApfsFile> actual= visitor.getFiles();
@@ -92,7 +92,7 @@ private String[] arraystringfordirectory(ArrayList<ApfsFile> files) {
 		ApfsFileCrawlingVisitor visitor = new ApfsFileCrawlingVisitor();
 		APFS ApfsFileSystem = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)ApfsFileSystem.getRootDir();
-		ApfsDirectory pictures = root.findByName_Directory("code");
+		ApfsDirectory pictures = root.findDirectoryByName("code");
 		pictures.accept(visitor);
 		String[] expected = {"e","f"};
 		ArrayList<ApfsFile> actual= visitor.getFiles();

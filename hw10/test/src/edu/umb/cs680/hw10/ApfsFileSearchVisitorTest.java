@@ -17,7 +17,7 @@ import edu.umb.cs680.hw10.ApfsLink;
 
 class AfpsFileSearchVisitorTest {
 
-static LocalDateTime localTime = LocalDateTime.of(2020, 12, 20, 0, 0);
+static LocalDateTime localTime = LocalDateTime.of(2020, 12, 12, 0, 0);
 private String[] arraystringfordirectory(ApfsFile f) {
 	Optional<ApfsDirectory> optionalDirectory = Optional.ofNullable(f.getParent());
 	String[] fileInfo = { Boolean.toString(f.isDirectory()), f.getName(), 

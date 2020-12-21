@@ -15,7 +15,7 @@ import edu.umb.cs680.hw10.ApfsLink;
 
 class AfpsCountingVisitorTest {
 
-static LocalDateTime localTime = LocalDateTime.of(2020, 12, 20, 0, 0);
+static LocalDateTime localTime = LocalDateTime.of(2020, 12, 12, 0, 0);
 	
 	@SuppressWarnings("unused")
 	@BeforeAll

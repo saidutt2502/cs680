@@ -17,7 +17,7 @@ import edu.umb.cs680.hw10.ApfsLink;
 
 class ApfsFileTest {
 
-static LocalDateTime localTime = LocalDateTime.of(2020, 05, 20, 0, 0);
+static LocalDateTime localTime = LocalDateTime.of(2020, 12, 12, 0, 0);
 private String[] arraystringforfile(ApfsFile Elementforfs) {
 	Optional<ApfsDirectory> optionalDirectory = Optional.ofNullable(Elementforfs.getParent());
 	String[] informationoffile = { Boolean.toString(Elementforfs.isDirectory()), Elementforfs.getName(), 
@@ -50,16 +50,16 @@ private String[] arraystringforfile(ApfsFile Elementforfs) {
 	void testfordirectory() {
 		APFS FilesystemofApfs = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
-		assertTrue(root.findByName_Directory("root").isDirectory());
-		assertTrue(root.findByName_Directory("home").isDirectory());
-		assertTrue(root.findByName_Directory("applications").isDirectory());
-		assertTrue(root.findByName_Directory("code").isDirectory());
-		assertFalse(root.findByName_File("a").isDirectory());
-		assertFalse(root.findByName_File("b").isDirectory());
-		assertFalse(root.findByName_File("c").isDirectory());
-		assertFalse(root.findByName_File("d").isDirectory());
-		assertFalse(root.findByName_File("e").isDirectory());
-		assertFalse(root.findByName_File("f").isDirectory());
+		assertTrue(root.findDirectoryByName("root").isDirectory());
+		assertTrue(root.findDirectoryByName("home").isDirectory());
+		assertTrue(root.findDirectoryByName("applications").isDirectory());
+		assertTrue(root.findDirectoryByName("code").isDirectory());
+		assertFalse(root.findFileByName("a").isDirectory());
+		assertFalse(root.findFileByName("b").isDirectory());
+		assertFalse(root.findFileByName("c").isDirectory());
+		assertFalse(root.findFileByName("d").isDirectory());
+		assertFalse(root.findFileByName("e").isDirectory());
+		assertFalse(root.findFileByName("f").isDirectory());
 	}
 	
 	@Test
@@ -67,7 +67,7 @@ private String[] arraystringforfile(ApfsFile Elementforfs) {
 		APFS FilesystemofApfs = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
 		String[] expected = { "false", "a", "350", localTime.toString(), "applications", "saidutt", localTime.toString() };
-		ApfsFile actual = root.findByName_File("a");
+		ApfsFile actual = root.findFileByName("a");
 		assertArrayEquals(expected,arraystringforfile(actual));
 	}
 	
@@ -76,7 +76,7 @@ private String[] arraystringforfile(ApfsFile Elementforfs) {
 		APFS FilesystemofApfs = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
 		String[] expected = { "false", "b", "700", localTime.toString(), "applications", "saidutt", localTime.toString() };
-		ApfsFile actual = root.findByName_File("b");
+		ApfsFile actual = root.findFileByName("b");
 		assertArrayEquals(expected,arraystringforfile(actual));
 	}
 	
@@ -85,7 +85,7 @@ private String[] arraystringforfile(ApfsFile Elementforfs) {
 		APFS FilesystemofApfs = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
 		String[] expected = { "false", "c", "800", localTime.toString(), "home", "saidutt", localTime.toString() };
-		ApfsFile actual = root.findByName_File("c");
+		ApfsFile actual = root.findFileByName("c");
 		assertArrayEquals(expected,arraystringforfile(actual));
 	}
 

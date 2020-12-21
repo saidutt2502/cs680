@@ -18,7 +18,7 @@ import edu.umb.cs680.hw10.ApfsLink;
 
 class ApfsDirectoryTest {
 
-static LocalDateTime localTime = LocalDateTime.of(2020, 05, 20, 0, 0);
+static LocalDateTime localTime = LocalDateTime.of(2020, 12, 12, 0, 0);
 private String[] arraystringfordirectory(ApfsDirectory Elementforfs) {
 	Optional<ApfsDirectory> optionalDirectory = Optional.ofNullable(Elementforfs.getParent());
 	String[] informationoffile = { Boolean.toString(Elementforfs.isDirectory()), Elementforfs.getName(), 
@@ -52,31 +52,31 @@ private String[] arraystringfordirectory(ApfsDirectory Elementforfs) {
 	void testforfileanddirectory() {
 		APFS FilesystemofApfs = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
-		assertSame("home", root.findByName_Directory("home").getName());
-		assertSame("root", root.findByName_Directory("root").getName());
-		assertSame("applications", root.findByName_Directory("applications").getName());
-		assertSame("code", root.findByName_Directory("code").getName());
-		assertSame("a", root.findByName_File("a").getName());	
-		assertSame("c", root.findByName_File("c").getName());
-		assertSame("d", root.findByName_File("d").getName());
-		assertSame("e", root.findByName_File("e").getName());
-		assertSame("f", root.findByName_File("f").getName());
-		assertSame("b", root.findByName_File("b").getName());
+		assertSame("home", root.findDirectoryByName("home").getName());
+		assertSame("root", root.findDirectoryByName("root").getName());
+		assertSame("applications", root.findDirectoryByName("applications").getName());
+		assertSame("code", root.findDirectoryByName("code").getName());
+		assertSame("a", root.findFileByName("a").getName());	
+		assertSame("c", root.findFileByName("c").getName());
+		assertSame("d", root.findFileByName("d").getName());
+		assertSame("e", root.findFileByName("e").getName());
+		assertSame("f", root.findFileByName("f").getName());
+		assertSame("b", root.findFileByName("b").getName());
 	}
 	@Test
 	void testdir() {
 		APFS FilesystemofApfs = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
-		assertTrue(root.findByName_Directory("root").isDirectory());
-		assertTrue(root.findByName_Directory("home").isDirectory());
-		assertTrue(root.findByName_Directory("applications").isDirectory());
-		assertTrue(root.findByName_Directory("code").isDirectory());
-		assertFalse(root.findByName_File("a").isDirectory());
-		assertFalse(root.findByName_File("b").isDirectory());
-		assertFalse(root.findByName_File("c").isDirectory());
-		assertFalse(root.findByName_File("d").isDirectory());
-		assertFalse(root.findByName_File("e").isDirectory());
-		assertFalse(root.findByName_File("f").isDirectory());
+		assertTrue(root.findDirectoryByName("root").isDirectory());
+		assertTrue(root.findDirectoryByName("home").isDirectory());
+		assertTrue(root.findDirectoryByName("applications").isDirectory());
+		assertTrue(root.findDirectoryByName("code").isDirectory());
+		assertFalse(root.findFileByName("a").isDirectory());
+		assertFalse(root.findFileByName("b").isDirectory());
+		assertFalse(root.findFileByName("c").isDirectory());
+		assertFalse(root.findFileByName("d").isDirectory());
+		assertFalse(root.findFileByName("e").isDirectory());
+		assertFalse(root.findFileByName("f").isDirectory());
 	}
 	
 	@Test
@@ -84,7 +84,7 @@ private String[] arraystringfordirectory(ApfsDirectory Elementforfs) {
 		APFS ApfsFileSystem = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)ApfsFileSystem.getRootDir();
 		String[] expected = { "true", "applications", "0", localTime.toString(), "root", "1050", "2", "saidutt", localTime.toString() };
-		ApfsDirectory actual = root.findByName_Directory("applications");
+		ApfsDirectory actual = root.findDirectoryByName("applications");
 		assertArrayEquals(expected,arraystringfordirectory(actual));
 	}
 	
@@ -92,7 +92,7 @@ private String[] arraystringfordirectory(ApfsDirectory Elementforfs) {
 	void testforsizecode() {
 		APFS FilesystemofApfs = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
-		assertEquals(1570, root.findByName_Directory("code").getTotalSize());
+		assertEquals(1570, root.findDirectoryByName("code").getTotalSize());
 	}
 	
 	@Test
@@ -100,7 +100,7 @@ private String[] arraystringfordirectory(ApfsDirectory Elementforfs) {
 		APFS FilesystemofApfs = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
 		String[] expected = { "true", "code", "0", localTime.toString(), "home", "1570", "2", "saidutt", localTime.toString() };
-		ApfsDirectory actual = root.findByName_Directory("code");
+		ApfsDirectory actual = root.findDirectoryByName("code");
 		assertArrayEquals(expected,arraystringfordirectory(actual));
 	}
 	
@@ -109,7 +109,7 @@ private String[] arraystringfordirectory(ApfsDirectory Elementforfs) {
 		APFS FilesystemofApfs = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
 		String[] expected = { "true", "code", "0", localTime.toString(), "home", "1570", "2", "saidutt", localTime.toString() };
-		ApfsDirectory actual = root.findByName_Directory("code");
+		ApfsDirectory actual = root.findDirectoryByName("code");
 		assertArrayEquals(expected,arraystringfordirectory(actual));
 	}
 	
@@ -118,7 +118,7 @@ private String[] arraystringfordirectory(ApfsDirectory Elementforfs) {
 		APFS FilesystemofApfs = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
 		String[] expected = { "true", "home", "0", localTime.toString(), "root", "2450", "3", "saidutt", localTime.toString() };
-		ApfsDirectory actual = root.findByName_Directory("home");
+		ApfsDirectory actual = root.findDirectoryByName("home");
 		assertArrayEquals(expected,arraystringfordirectory(actual));
 	}
 	
@@ -127,20 +127,20 @@ private String[] arraystringfordirectory(ApfsDirectory Elementforfs) {
 	void testforinfoonfiles() {
 		APFS FilesystemofApfs = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
-		assertSame("d", root.findByName_Directory("home").getFiles().get(1).getName());
-		assertSame("a", root.findByName_Directory("applications").getFiles().get(0).getName());
-		assertSame("b", root.findByName_Directory("applications").getFiles().get(1).getName());
-		assertSame("c", root.findByName_Directory("home").getFiles().get(0).getName());
+		assertSame("d", root.findDirectoryByName("home").getFiles().get(1).getName());
+		assertSame("a", root.findDirectoryByName("applications").getFiles().get(0).getName());
+		assertSame("b", root.findDirectoryByName("applications").getFiles().get(1).getName());
+		assertSame("c", root.findDirectoryByName("home").getFiles().get(0).getName());
 	}
 
 	@Test
 	void testsubfilesindir() {
 		APFS FilesystemofApfs = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
-		assertEquals(2, root.findByName_Directory("root").countChildren());
-		assertEquals(2, root.findByName_Directory("applications").countChildren());
-		assertEquals(3, root.findByName_Directory("home").countChildren());
-		assertEquals(2, root.findByName_Directory("code").countChildren());
+		assertEquals(2, root.findDirectoryByName("root").countChildren());
+		assertEquals(2, root.findDirectoryByName("applications").countChildren());
+		assertEquals(3, root.findDirectoryByName("home").countChildren());
+		assertEquals(2, root.findDirectoryByName("code").countChildren());
 	}
 	
 	@Test
@@ -148,7 +148,7 @@ private String[] arraystringfordirectory(ApfsDirectory Elementforfs) {
 		APFS FilesystemofApfs = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
 		String[] expected = { "true", "root", "0", localTime.toString(), null, "3500", "2", "saidutt", localTime.toString() };
-		ApfsDirectory actual = root.findByName_Directory("root");
+		ApfsDirectory actual = root.findDirectoryByName("root");
 		assertArrayEquals(expected,arraystringfordirectory(actual));
 	}
 

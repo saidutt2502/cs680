@@ -80,48 +80,48 @@ public class ApfsDirectory extends ApfsElement{
 	
 	
 	
-	public ApfsLink findByName_Link(String nameoflink) {
+	public ApfsLink findLinkByName(String linkName) {
 		ApfsLink link = null;
 		for(ApfsLink l : getLinks()) {
-			if(nameoflink.equals(l.getName()))
+			if(linkName.equals(l.getName()))
 				link = l;
 		}
 		if(link == null) {
 			for(ApfsDirectory dir : getSubDirectories()) {
-				link = dir.findByName_Link(nameoflink);
+				link = dir.findLinkByName(linkName);
 				if(link != null)
 					break;
 			}
 		}
 		return link;
 	}
-	public ApfsDirectory findByName_Directory(String nameofdir) {
-		ApfsDirectory nameddirectory = null;
-		if(nameofdir.equals(getName()))
-			nameddirectory = this;
+	public ApfsDirectory findDirectoryByName(String directoryName) {
+		ApfsDirectory directory = null;
+		if(directoryName.equals(getName()))
+			directory = this;
 		else {
 			for(ApfsDirectory dir : getSubDirectories()) {
-				if(nameddirectory == null) {
-					nameddirectory = dir.findByName_Directory(nameofdir);
-					if(nameofdir.equals(dir.getName())) {
-						nameddirectory = dir;
+				if(directory == null) {
+					directory = dir.findDirectoryByName(directoryName);
+					if(directoryName.equals(dir.getName())) {
+						directory = dir;
 						break;
 					}
 				}
 			}
 		}
-		return nameddirectory;
+		return directory;
 	}
 	
-	public ApfsFile findByName_File(String namedfile) {
+	public ApfsFile findFileByName(String fileName) {
 		ApfsFile fileinstance = null;
 		for(ApfsFile f : getFiles()) {
-			if(namedfile.equals(f.getName()))
+			if(fileName.equals(f.getName()))
 				fileinstance = f;
 		}
 		if(fileinstance == null) {
 			for(ApfsDirectory dir : getSubDirectories()) {
-				fileinstance = dir.findByName_File(namedfile);
+				fileinstance = dir.findFileByName(fileName);
 				if(fileinstance != null)
 					break;
 			}

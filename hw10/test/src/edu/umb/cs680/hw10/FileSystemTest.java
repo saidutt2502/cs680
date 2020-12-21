@@ -15,7 +15,7 @@ import edu.umb.cs680.hw10.ApfsLink;
 
 class FileSystemTest {
 
-static LocalDateTime localTime = LocalDateTime.of(2020, 12, 20, 0, 0);
+static LocalDateTime localTime = LocalDateTime.of(2020, 12, 12, 0, 0);
 	
 	@SuppressWarnings("unused")
 	@BeforeAll
@@ -61,7 +61,7 @@ static LocalDateTime localTime = LocalDateTime.of(2020, 12, 20, 0, 0);
 		APFS FilesystemofApfs = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
 		String[] expected = { "true", "root", "0", localTime.toString(), null, "3500", "2", "drive", "3500", "saidutt", localTime.toString()};
-		ApfsDirectory actual = root.findByName_Directory("root");
+		ApfsDirectory actual = root.findDirectoryByName("root");
 		assertArrayEquals(expected,stringarraycreation(actual));
 	}
 	

@@ -17,7 +17,7 @@ import edu.umb.cs680.hw10.FSElement;
 
 class ApfsLinkTest {
 	
-	static LocalDateTime localTime = LocalDateTime.of(2020, 12, 20, 0, 0);
+	static LocalDateTime localTime = LocalDateTime.of(2020, 12, 12, 0, 0);
 	private String[] stringelementforfs(FSElement Elementforfs) {
 		Optional<ApfsDirectory> optionalDirectory = Optional.ofNullable(Elementforfs.getParent());
 		String[] informationoffs = { Boolean.toString(Elementforfs.isDirectory()), Elementforfs.getName(), 
@@ -49,7 +49,7 @@ class ApfsLinkTest {
 		APFS FilesystemofApfs = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
 		String[] expected = { "true", "home", "0", localTime.toString(), "root" };
-		ApfsDirectory actual = root.findByName_Directory("home");
+		ApfsDirectory actual = root.findDirectoryByName("home");
 		assertArrayEquals(expected,stringelementforfs(actual));
 	}
 	
@@ -59,7 +59,7 @@ class ApfsLinkTest {
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
 		String[] expected = { "false", "a", "350", localTime.toString(), "applications" };
 		// this needs to return true for applications as b is a  part of applications but still returning false.
-		ApfsFile actual = root.findByName_File("a");
+		ApfsFile actual = root.findFileByName("a");
 		assertArrayEquals(expected,stringelementforfs(actual));
 	}
 	@Test
@@ -68,7 +68,7 @@ class ApfsLinkTest {
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
 		String[] expected = { "false", "b", "700", localTime.toString(), "applications" };
 		// this needs to return true for applications as b is a  part of applications but still returning false.
-		ApfsFile actual = root.findByName_File("b");
+		ApfsFile actual = root.findFileByName("b");
 		assertArrayEquals(expected,stringelementforfs(actual));
 	}
 
