@@ -48,7 +48,7 @@ class ApfsLinkTest {
 		APFS FilesystemofApfs = APFS.getAPFSFileSystem();
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
 		String[] expected = { "true", "applications", "0", localTime.toString(), "root" };
-		ApfsDirectory actual = (ApfsDirectory) root.findByName_Link("x").getTarget();
+		ApfsDirectory actual = (ApfsDirectory) root.findLinkByName("x").getTarget();
 		assertArrayEquals(expected,stringelementforfs(actual));
 	}
 	
@@ -59,7 +59,7 @@ class ApfsLinkTest {
 		ApfsDirectory root = (ApfsDirectory)FilesystemofApfs.getRootDir();
 		String[] expected = { "false", "b", "700", localTime.toString(), "applications" };
 		// this needs to return true for applications as b is a  part of applications but still returning false.
-		ApfsFile actual = (ApfsFile) root.findByName_Link("y").getTarget();
+		ApfsFile actual = (ApfsFile) root.findLinkByName("y").getTarget();
 		assertArrayEquals(expected,stringelementforfs(actual));
 	}
 

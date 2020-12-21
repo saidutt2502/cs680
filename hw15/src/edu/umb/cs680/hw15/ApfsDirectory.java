@@ -104,7 +104,7 @@ public class ApfsDirectory extends ApfsElement{
 	
 	
 	
-	public ApfsLink findByName_Link(String linkName) {
+	public ApfsLink findLinkByName(String linkName) {
 		ApfsLink link = null;
 		for(ApfsLink l : getLinks()) {
 			if(linkName.equals(l.getName()))
@@ -112,7 +112,7 @@ public class ApfsDirectory extends ApfsElement{
 		}
 		if(link == null) {
 			for(ApfsDirectory dir : getSubDirectories()) {
-				link = dir.findByName_Link(linkName);
+				link = dir.findLinkByName(linkName);
 				if(link != null)
 					break;
 			}
