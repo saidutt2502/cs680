@@ -34,7 +34,7 @@
 	<target name="compile" depends="init">
 		<javac srcdir="${src}" destdir="${bin}" includeAntRuntime="no">
 			<classpath refid="classpath"/>
-			<include name="edu.umb.cs680.hw13/**" />
+			<include name="edu/umb/cs680/hw13/*.java" />
 		</javac>
 		<javac srcdir="${test.src}" destdir="${test.bin}" includeAntRuntime="no">
 			<classpath refid="classpath"/>
